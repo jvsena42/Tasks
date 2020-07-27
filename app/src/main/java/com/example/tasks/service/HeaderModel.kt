@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName
 
 class HeaderModel {
 
-    @SerializedName("toke")
+    @SerializedName("token")
     var token:String = ""
 
     @SerializedName("personKey")
