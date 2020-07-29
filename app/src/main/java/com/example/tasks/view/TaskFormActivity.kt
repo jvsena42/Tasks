@@ -51,8 +51,7 @@ class TaskFormActivity : AppCompatActivity(), View.OnClickListener, DatePickerDi
             this.description = edit_description.text.toString()
             this.complete = check_complete.isChecked
             this.dueDate = button_date.text.toString()
-            //this.priorityId = mListPriorityId[spinner_priority.selectedItemPosition]
-            this.priorityId = 2
+            this.priorityId = mListPriorityId[spinner_priority.selectedItemPosition]
         }
 
         mViewModel.save(task)
