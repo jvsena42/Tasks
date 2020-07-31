@@ -22,7 +22,7 @@ import java.util.*
 class TaskFormActivity : AppCompatActivity(), View.OnClickListener, DatePickerDialog.OnDateSetListener {
 
     private lateinit var mViewModel: TaskFormViewModel
-    private val mDateFormat = SimpleDateFormat("dd/mm/yyyy")
+    private val mDateFormat = SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH)
     private val mListPriorityId : MutableList<Int> = arrayListOf()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -96,8 +96,8 @@ class TaskFormActivity : AppCompatActivity(), View.OnClickListener, DatePickerDi
         val calendar = Calendar.getInstance()
         calendar.set(year,month,dayOfMonth)
 
-        val str = mDateFormat.format(calendar.time)
-        button_date.text = str
+        val strDate = mDateFormat.format(calendar.time)
+        button_date.text = strDate
     }
 
 }
