@@ -17,7 +17,7 @@ class TaskFormViewModel(application: Application) : AndroidViewModel(application
     private val mTaskRepository = TaskRepository(application)
 
     private val mPriorityList = MutableLiveData<List<PriorityModel>>()
-    val priorities: LiveData<List<PriorityModel>> = mPriorityList
+    var priorities: LiveData<List<PriorityModel>> = mPriorityList
 
     private val mValidation = MutableLiveData<ValidationListener>()
     val validation: LiveData<ValidationListener> = mValidation
