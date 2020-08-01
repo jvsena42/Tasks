@@ -33,7 +33,6 @@ class TaskViewHolder(itemView: View, val listener: TaskListener) :
         this.mTextPriority.text = mPriorityRepository.getDescription(task.priorityId)
 
         val date = SimpleDateFormat("yyyy-MM-dd").parse(task.dueDate)
-
         this.mTextDueDate.text = mDateFormat.format(date)
 
         if (task.complete){
