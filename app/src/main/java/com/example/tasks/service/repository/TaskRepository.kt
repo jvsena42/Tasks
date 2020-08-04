@@ -28,7 +28,7 @@ class TaskRepository(val context: Context) {
     }
 
     fun overDue(listener: APIListener<List<TaskModel>>) {
-        val call: Call<List<TaskModel>> = mRemote.nextWeek()
+        val call: Call<List<TaskModel>> = mRemote.overDue()
         list(call, listener)
     }
 
